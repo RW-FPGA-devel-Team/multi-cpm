@@ -55,12 +55,14 @@ module mist_top (
    output [5:0]  VGA_R,
    output [5:0]  VGA_G,
    output [5:0]  VGA_B,
-
-   input     UART_RXD,
-   output    UART_TXD
+   //input     TAPE_IN, 
+	//output [9:0] DAC_L,
+   //output [9:0] DAC_R,
+   input     UART_RX,
+   output    UART_TX
 );
 
-OricAtmos_MiST  guest
+MultiCPM  guest
 (
 	.*
 );

@@ -123,7 +123,7 @@ architecture RTL of deca_top is
 	signal joyd : std_logic_vector(6 downto 0);
 
 
-COMPONENT  PCW
+COMPONENT  MultiCPM
 	PORT
 	(
 		CLOCK_27 :	IN STD_LOGIC;
@@ -286,7 +286,7 @@ dac_l_s <= ('0' & dac_l & "00000");
 dac_r_s <= ('0' & dac_r & "00000");
 
 
-guest: COMPONENT  PCW
+guest: COMPONENT  MultiCPM
 	PORT map
 	(
 		CLOCK_27 => MAX10_CLK1_50,
